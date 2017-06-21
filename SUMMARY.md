@@ -8,5 +8,6 @@
 * Linux
 	* [samba](./docs/samba.md)
 
+* [Node.js](./docs/nodejs.md)
 * [便利tool](./docs/tools.md)
 

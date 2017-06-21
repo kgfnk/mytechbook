@@ -8,3 +8,5 @@
 * Linux
 	* [samba](./docs/samba.md)
 
+* [便利tool](./docs/tools.md)
+

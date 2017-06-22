@@ -1,86 +1,194 @@
-# chocolatey
+# node.js
 
-- [公式](https://chocolatey.org/)
-- [GitHub](https://github.com/chocolatey/chocolatey)
+- [公式](https://nodejs.org/ja/)
 
 ## 概要
 
-Linuxのパッケージ管理ツールyumやapt-getのWindows。
+サーバーサイドJavaScript実行環境
 
-### 対象
-
-Windows 7
-
-Windows 10 は、標準でパッケージ管理ソフトが入っている
-
-- [Windowsでもパッケージ管理がしたい](http://dev.classmethod.jp/server-side/os/windows-packagemanagement/)
+- npm(node.jsのpackage管理ツール)
 
 ## インストール
 
-[公式:Installing Chocolatey](https://chocolatey.org/install#installing-chocolatey)
+Windows
+```
+$ cinst nodejs.install
+```
 
-コマンドプロンプト Or PowerShellより公式サイトに記載されているコマンドを実行  
-**※管理者モードで実行する必要あり**
+Mac
+```
+$ brew install node
+```
 
-GUIもある模様[Chocolatey GUI をまず入れてみよう](http://hayashikejinan.com/windows/1145/)
-
-## 使い方
-
-コマンドプロンプトからコマンドを実行  
-**※管理者モードで実行を推奨**
-
-コマンドの省略名が利用可能
-- `chocolatey` ⇒ `choco`
-- `choco install` ⇒ `cinst`
+CentOS
+```
+sudo yum install nodejs
+```
 
 ### バージョン確認
 ```
-$ choco -v
-0.10.7
+$ node -v
+v8.1.2
+$ npm -v
+5.0.3
 ```
 
-### help
+## 使い方
+
+Expressを利用した簡単なHello Worldプログラム
+
+プロジェクト用フォルダ作成
 ```
-$ choco --help
+$ mkdir project
+$ cd project
 ```
 
-### 主要なコマンド
-|コマンド                     |省略系               |説明                                               |
-|---------------------------- |---------------------|---------------------------------------------------|
-|`$ choco list`               |`$ clist`            |パッケージ一覧表示                                 |
-|`$ choco list [pkgname]`     |`$ clist [pkgname]`  |パッケージ検索(alias=search)                       |
-|`$ choco list -l`            |`$ clist -l`         |インストール済みパッケージ一覧表示                 |
-|`$ choco info [pkgname]`     |-                    |パッケージの詳細を表示                             |
-|`$ choco install [pkgname]`  |`$ cinst [pkgname]`  |パッケージのインストール                           |
-|`$ choco uninstall [pkgname]`|`$ cuninst [pkgname]`|インストール済みパッケージの削除                   |
-|`$ choco upgrade [pkgname]`  |`$ cup [pkgname]`    |インストール済みのパッケージをアップデート         |
-|`$ choco upgrade all`        |`$ cup all`          |インストール済みのパッケージを**全て**アップデート |
-
-パッケージ全体の更新
+初期化
 ```
-$ choco upgrade all -y
+$ npm init
+package name: (project)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+```
+入力を促されるが全てEnterでOK。package.jsonが作成されるので後で変更。
+
+package.json
+```json
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
 ```
 
-## アンインストール
+[公式|package.json](https://docs.npmjs.com/files/package.json)
 
-[公式:Uninstalling Chocolatey](https://chocolatey.org/docs/uninstallation)
+Hello World用プログラム作成
 
-フォルダを削除
+index.js
+```javascript
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+
+app.listen(3000, function () {
+  console.log('Server running at http://localhost:3000/');
+});
 ```
-C:\ProgramData\chocolatey
+
 ```
+$ npm install express --save
+$ node index.js
+Server running at http://localhost:3000/
+```
+ブラウザからアクセス
+<http://localhost:3000/>
+
+### 補足
+
+```
+project
+│  index.js
+│  package-lock.json
+│  package.json
+│
+└─node_modules
+```
+※node_modulesは`package.json`で管理されるためバージョン管理から外すこと
+
+
+## 主要なコマンド
+
+### npm
+
+|コマンド                            |説明                                                           |
+|----------------------------------- |---------------------------------------------------------------|
+|`$ npm help`                        |ヘルプ表示                                                     |
+|`$ npm search [keyword]`            |パッケージ検索                                                 |
+|`$ npm ls`                          |インストール済みのパッケージを表示                             |
+|`$ npm install [pkgname]`           |パッケージをインストール                                       |
+|`$ npm install [pkgname] --save`    |パッケージをインストールし、package.jsonへ保存する             |
+|`$ npm install [pkgname] --save-dev`|パッケージをインストールし、package.jsonへ保存する(開発環境用) |
+|`$ npm install`                     |package.jsonに従ってパッケージをインストール                   |
+|`$ npm uninstall [pkgname]`         |パッケージをアンインストール                                   |
+|`$ npm info [pkgname]`              |パッケージの情報を見る                                         |
+
+### グローバルへのインストール
+
+|コマンド                            |説明                                                           |
+|----------------------------------- |---------------------------------------------------------------|
+|`$ sudo npm ls -g`                  |グローバルへインストールされたパッケージを表示                 |
+|`$ sudo npm install -g [pkgname]`   |パッケージをグローバルへインストール                           |
+|`$ sudo npm uninstall -g [pkgname]` |パッケージをグローバルからアンインストール                     |
+
+※グローバルへのアクセス`-g`は、管理者権限で行う方が良い。
 
 ## パッケージ検索
 
-[公式](https://chocolatey.org/packages)
+[公式](https://www.npmjs.com/)
 
-## 一括インストール
+### よく使うパッケージ
 
-```
-$ cinst packages.config
-```
-<script src="https://gist.github.com/kgfnk/a2c24db8891dae7d11a1a629ca9f75ca.js"></script>
+#### express
+
+Webアプリケーションフレームワーク
+
+[公式](http://expressjs.com/)
+
+#### forever
+
+デーモン起動
+
+[node.jsスクリプトをforeverでデーモン化する](http://onlineconsultant.jp/pukiwiki/?node.js%20node.js%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%92forever%E3%81%A7%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3%E5%8C%96%E3%81%99%E3%82%8B)
+[Node.jsでforeverを使ってスクリプトの起動を永続化する - Qiita](http://qiita.com/setouchi/items/0dcc5869e7eb0ab524ea)
+
+#### mocha
+
+テストフレームワーク
+
+[MochaでJavaScriptのテストを書く - CLOVER](http://d.hatena.ne.jp/Kazuhira/20160306/1457271963)
+
+#### nock
+
+テスト時にモックレスポンスを返す
+
+[MochaとNockでモックサーバーを作ってレスポンスのテスト | MMMブログ](http://blog.mmmcorp.co.jp/blog/2015/11/16/nock-with-mocha/)
+
+#### gulp
+
+タスクランナー
+
+[gulpを利用してmochaで書かれたテストを実行する - テノニッキ (@hideack 's diary)](http://hideack.hatenablog.com/entry/2014/10/04/195322)
+
+#### その他
+
+- supertest
+- body-parser
+- cjson
+- log4js
+- date-utils
+- morgan
+- range_check
+- randomstring
+- node-yaml-config
+
 
 ## 参考
 
-- [Qiita:Chocolateyを使った環境構築の時のメモ](http://qiita.com/konta220/items/95b40b4647a737cb51aa)
+- [npmでnode.jsのpackageを管理する - Qiita](http://qiita.com/sinmetal/items/395edf1d195382cfd8bc)
+- [npmコマンドの使い方 - Qiita](http://qiita.com/yoh-nak/items/8446bf12094c729d00fe)

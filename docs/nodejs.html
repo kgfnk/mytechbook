@@ -1,0 +1,505 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Node.js · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tools.html" />
+    
+    
+    <link rel="prev" href="samba.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Windows
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="chocolatey.html">
+            
+                <a href="chocolatey.html">
+            
+                    
+                    chocolatey
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="samba.html">
+            
+                <a href="samba.html">
+            
+                    
+                    samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="nodejs.html">
+            
+                <a href="nodejs.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="tools.html">
+            
+                <a href="tools.html">
+            
+                    
+                    便利tool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Node.js</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="nodejs">node.js</h1>
+<ul>
+<li><a href="https://nodejs.org/ja/" target="_blank">&#x516C;&#x5F0F;</a></li>
+</ul>
+<h2 id="&#x6982;&#x8981;">&#x6982;&#x8981;</h2>
+<p>&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x30B5;&#x30A4;&#x30C9;JavaScript&#x5B9F;&#x884C;&#x74B0;&#x5883;</p>
+<ul>
+<li>npm(node.js&#x306E;package&#x7BA1;&#x7406;&#x30C4;&#x30FC;&#x30EB;)</li>
+</ul>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
+<p>Windows</p>
+<pre><code>$ cinst nodejs.install
+</code></pre><p>Mac</p>
+<pre><code>$ brew install node
+</code></pre><p>CentOS</p>
+<pre><code>sudo yum install nodejs
+</code></pre><h3 id="&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x78BA;&#x8A8D;">&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x78BA;&#x8A8D;</h3>
+<pre><code>$ node -v
+v8.1.2
+$ npm -v
+5.0.3
+</code></pre><h2 id="&#x4F7F;&#x3044;&#x65B9;">&#x4F7F;&#x3044;&#x65B9;</h2>
+<p>Express&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;&#x7C21;&#x5358;&#x306A;Hello World&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;</p>
+<p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x7528;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x4F5C;&#x6210;</p>
+<pre><code>$ mkdir project
+$ cd project
+</code></pre><p>&#x521D;&#x671F;&#x5316;</p>
+<pre><code>$ npm init
+package name: (project)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+</code></pre><p>&#x5165;&#x529B;&#x3092;&#x4FC3;&#x3055;&#x308C;&#x308B;&#x304C;&#x5168;&#x3066;Enter&#x3067;OK&#x3002;package.json&#x304C;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x5F8C;&#x3067;&#x5909;&#x66F4;&#x3002;</p>
+<p>package.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;project&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>
+}
+</code></pre>
+<p><a href="https://docs.npmjs.com/files/package.json" target="_blank">&#x516C;&#x5F0F;|package.json</a></p>
+<p>Hello World&#x7528;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F5C;&#x6210;</p>
+<p>index.js</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">var</span> app = express();
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+  res.send(<span class="hljs-string">&apos;Hello World!&apos;</span>);
+});
+
+app.listen(<span class="hljs-number">3000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server running at http://localhost:3000/&apos;</span>);
+});
+</code></pre>
+<pre><code>$ npm install express --save
+$ node index.js
+Server running at http://localhost:3000/
+</code></pre><p>&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x304B;&#x3089;&#x30A2;&#x30AF;&#x30BB;&#x30B9;
+<a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a></p>
+<h3 id="&#x88DC;&#x8DB3;">&#x88DC;&#x8DB3;</h3>
+<pre><code>project
+&#x2502;  index.js
+&#x2502;  package-lock.json
+&#x2502;  package.json
+&#x2502;
+&#x2514;&#x2500;node_modules
+</code></pre><p>&#x203B;node_modules&#x306F;<code>package.json</code>&#x3067;&#x7BA1;&#x7406;&#x3055;&#x308C;&#x308B;&#x305F;&#x3081;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7BA1;&#x7406;&#x304B;&#x3089;&#x5916;&#x3059;&#x3053;&#x3068;</p>
+<h2 id="&#x4E3B;&#x8981;&#x306A;&#x30B3;&#x30DE;&#x30F3;&#x30C9;">&#x4E3B;&#x8981;&#x306A;&#x30B3;&#x30DE;&#x30F3;&#x30C9;</h2>
+<h3 id="npm">npm</h3>
+<table>
+<thead>
+<tr>
+<th>&#x30B3;&#x30DE;&#x30F3;&#x30C9;</th>
+<th>&#x8AAC;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$ npm help</code></td>
+<td>&#x30D8;&#x30EB;&#x30D7;&#x8868;&#x793A;</td>
+</tr>
+<tr>
+<td><code>$ npm search [keyword]</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x691C;&#x7D22;</td>
+</tr>
+<tr>
+<td><code>$ npm ls</code></td>
+<td>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x6E08;&#x307F;&#x306E;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x8868;&#x793A;</td>
+</tr>
+<tr>
+<td><code>$ npm install [pkgname]</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</td>
+</tr>
+<tr>
+<td><code>$ npm install [pkgname] --save</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3001;package.json&#x3078;&#x4FDD;&#x5B58;&#x3059;&#x308B;</td>
+</tr>
+<tr>
+<td><code>$ npm install [pkgname] --save-dev</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3001;package.json&#x3078;&#x4FDD;&#x5B58;&#x3059;&#x308B;(&#x958B;&#x767A;&#x74B0;&#x5883;&#x7528;)</td>
+</tr>
+<tr>
+<td><code>$ npm install</code></td>
+<td>package.json&#x306B;&#x5F93;&#x3063;&#x3066;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</td>
+</tr>
+<tr>
+<td><code>$ npm uninstall [pkgname]</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</td>
+</tr>
+<tr>
+<td><code>$ npm info [pkgname]</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306E;&#x60C5;&#x5831;&#x3092;&#x898B;&#x308B;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x3078;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x3078;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x30B3;&#x30DE;&#x30F3;&#x30C9;</th>
+<th>&#x8AAC;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$ sudo npm ls -g</code></td>
+<td>&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x3078;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x305F;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x8868;&#x793A;</td>
+</tr>
+<tr>
+<td><code>$ sudo npm install -g [pkgname]</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x3078;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</td>
+</tr>
+<tr>
+<td><code>$ sudo npm uninstall -g [pkgname]</code></td>
+<td>&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x304B;&#x3089;&#x30A2;&#x30F3;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x203B;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x3078;&#x306E;&#x30A2;&#x30AF;&#x30BB;&#x30B9;<code>-g</code>&#x306F;&#x3001;&#x7BA1;&#x7406;&#x8005;&#x6A29;&#x9650;&#x3067;&#x884C;&#x3046;&#x65B9;&#x304C;&#x826F;&#x3044;&#x3002;</p>
+<h2 id="&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x691C;&#x7D22;">&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x691C;&#x7D22;</h2>
+<p><a href="https://www.npmjs.com/" target="_blank">&#x516C;&#x5F0F;</a></p>
+<h3 id="&#x3088;&#x304F;&#x4F7F;&#x3046;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;">&#x3088;&#x304F;&#x4F7F;&#x3046;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;</h3>
+<h4 id="express">express</h4>
+<p>Web&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x30EF;&#x30FC;&#x30AF;</p>
+<p><a href="http://expressjs.com/" target="_blank">&#x516C;&#x5F0F;</a></p>
+<h4 id="forever">forever</h4>
+<p>&#x30C7;&#x30FC;&#x30E2;&#x30F3;&#x8D77;&#x52D5;</p>
+<p><a href="http://onlineconsultant.jp/pukiwiki/?node.js%20node.js%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%92forever%E3%81%A7%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3%E5%8C%96%E3%81%99%E3%82%8B" target="_blank">node.js&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;forever&#x3067;&#x30C7;&#x30FC;&#x30E2;&#x30F3;&#x5316;&#x3059;&#x308B;</a>
+<a href="http://qiita.com/setouchi/items/0dcc5869e7eb0ab524ea" target="_blank">Node.js&#x3067;forever&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x306E;&#x8D77;&#x52D5;&#x3092;&#x6C38;&#x7D9A;&#x5316;&#x3059;&#x308B; - Qiita</a></p>
+<h4 id="mocha">mocha</h4>
+<p>&#x30C6;&#x30B9;&#x30C8;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x30EF;&#x30FC;&#x30AF;</p>
+<p><a href="http://d.hatena.ne.jp/Kazuhira/20160306/1457271963" target="_blank">Mocha&#x3067;JavaScript&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x66F8;&#x304F; - CLOVER</a></p>
+<h4 id="nock">nock</h4>
+<p>&#x30C6;&#x30B9;&#x30C8;&#x6642;&#x306B;&#x30E2;&#x30C3;&#x30AF;&#x30EC;&#x30B9;&#x30DD;&#x30F3;&#x30B9;&#x3092;&#x8FD4;&#x3059;</p>
+<p><a href="http://blog.mmmcorp.co.jp/blog/2015/11/16/nock-with-mocha/" target="_blank">Mocha&#x3068;Nock&#x3067;&#x30E2;&#x30C3;&#x30AF;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x30EC;&#x30B9;&#x30DD;&#x30F3;&#x30B9;&#x306E;&#x30C6;&#x30B9;&#x30C8; | MMM&#x30D6;&#x30ED;&#x30B0;</a></p>
+<h4 id="gulp">gulp</h4>
+<p>&#x30BF;&#x30B9;&#x30AF;&#x30E9;&#x30F3;&#x30CA;&#x30FC;</p>
+<p><a href="http://hideack.hatenablog.com/entry/2014/10/04/195322" target="_blank">gulp&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;mocha&#x3067;&#x66F8;&#x304B;&#x308C;&#x305F;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B; - &#x30C6;&#x30CE;&#x30CB;&#x30C3;&#x30AD; (@hideack &apos;s diary)</a></p>
+<h4 id="&#x305D;&#x306E;&#x4ED6;">&#x305D;&#x306E;&#x4ED6;</h4>
+<ul>
+<li>supertest</li>
+<li>body-parser</li>
+<li>cjson</li>
+<li>log4js</li>
+<li>date-utils</li>
+<li>morgan</li>
+<li>range_check</li>
+<li>randomstring</li>
+<li>node-yaml-config</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<ul>
+<li><a href="http://qiita.com/sinmetal/items/395edf1d195382cfd8bc" target="_blank">npm&#x3067;node.js&#x306E;package&#x3092;&#x7BA1;&#x7406;&#x3059;&#x308B; - Qiita</a></li>
+<li><a href="http://qiita.com/yoh-nak/items/8446bf12094c729d00fe" target="_blank">npm&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x4F7F;&#x3044;&#x65B9; - Qiita</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="samba.html" class="navigation navigation-prev " aria-label="Previous page: samba">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tools.html" class="navigation navigation-next " aria-label="Next page: 便利tool">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Node.js","level":"1.4","depth":1,"next":{"title":"便利tool","level":"1.5","depth":1,"path":"docs/tools.md","ref":"./docs/tools.md","articles":[]},"previous":{"title":"samba","level":"1.3.1","depth":2,"path":"docs/samba.md","ref":"./docs/samba.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/nodejs.md","mtime":"2017-06-21T08:33:16.630Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-22T02:55:29.955Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

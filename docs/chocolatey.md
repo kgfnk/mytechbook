@@ -79,7 +79,8 @@ C:\ProgramData\chocolatey
 ```
 $ cinst packages.config
 ```
-<script src="https://gist.github.com/kgfnk/a2c24db8891dae7d11a1a629ca9f75ca.js"></script>
+
+<iframe src="https://gist.github.com/kgfnk/a2c24db8891dae7d11a1a629ca9f75ca.pibb" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
 
 ## 参考
 

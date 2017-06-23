@@ -1,0 +1,29 @@
+{
+  "name": "mytechbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^1.0.0",
+    "gitbook-plugin-plantuml": "0.0.15"
+  },
+  "scripts": {
+    "build": "gitbook build",
+    "deploy": "npm run build && gh-pages -d _book",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgfnk/mytechbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgfnk/mytechbook/issues"
+  },
+  "homepage": "https://github.com/kgfnk/mytechbook#readme"
+}

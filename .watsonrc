@@ -1,0 +1,36 @@
+# watson rc
+# watson - inline issue manager
+# [goosecode] labs
+
+
+# Directories
+[dirs]
+./
+
+
+# Tags
+[tags]
+fix
+review
+todo
+
+
+# Ignores
+[ignore]
+.git
+*.swp
+
+
+[github_api]
+kgfnk
+
+
+[github_endpoint]
+https://api.github.com
+
+
+[github_repo]
+kgfnk/mytechbook
+
+
+

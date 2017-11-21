@@ -1,0 +1,44 @@
+@startuml
+title シーケンス図
+scale 2
+
+hide footbox
+autonumber
+
+actor "エンドユーザー" as user
+
+box "システム"
+  participant "登録画面" as view
+  database "データベース" as db
+end box
+
+== 画面表示 ==
+
+user -> view : [表示] get /view
+activate view
+
+view --> user : response html
+
+== 登録操作 ==
+
+user -> view : [登録] post /view
+
+view -> db : insert
+activate db
+
+db --> db : insert user
+
+db --> db : insert profile
+
+alt 正常終了
+  db --> view : success
+  view --> user : response html
+else 異常終了
+  db --> view : error
+  view --> user : response error page html
+end
+
+deactivate db
+deactivate view
+
+@enduml

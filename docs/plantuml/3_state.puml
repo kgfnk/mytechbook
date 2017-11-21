@@ -1,0 +1,17 @@
+@startuml
+title 状態遷移図
+
+[*] --> active : 新規登録
+
+active -right-> inactive : 無効化
+inactive -left-> active  : 有効化
+
+inactive --> deleted: 削除
+
+note right {
+  論理削除
+}
+
+deleted --> [*]
+
+@enduml

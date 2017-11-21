@@ -1,0 +1,40 @@
+@startuml
+title ER図
+
+package "システム" {
+
+    entity "会員" as user <<M,AAFFAA)>> {
+        + 会員ID [PK]
+        --
+        名前
+        メールアドレス
+    }
+
+    entity "注文テーブル" as order <<T,FFAA00)>> {
+        + 注文ID   [PK]
+        --
+        # 商品ID [FK]
+        # 会員ID [FK]
+        注文数
+    }
+
+    entity "商品マスタ" as product <<M,AAFFAA)>> {
+        + 商品ID [PK]
+        --
+        商品名
+    }
+}
+
+user        ||--|{     order
+product     ||--|{     order
+
+/'
+------ :1
+----|| :1 and only 1
+----o| :0 or 1
+-----{ :many
+----|{ :1 or more
+----o{ :0 or many
+'/
+
+@enduml

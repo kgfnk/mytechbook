@@ -1,0 +1,15 @@
+@startuml
+
+Project starts the 17th of november 2017
+
+[設計] lasts 15 days
+[実装] lasts 10 days
+[テスト] lasts 10 days
+[リリース] lasts 1 days
+
+[実装] starts at [設計]'s end
+[テスト] starts at [実装]'s end
+
+[リリース] happens at [テスト]'s end
+
+@enduml

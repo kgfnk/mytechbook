@@ -1,0 +1,36 @@
+@startuml
+title ユースケース図
+
+left to right direction
+' top to bottom direction
+
+'skinparam handwritten true
+'skinparam backgroundColor pink
+
+actor :管理者: as admin
+actor :会員: as user
+actor :非会員: as nonuser
+
+package "システム" as system {
+
+  package "会員用" {
+    user -[#0000FF]-> (参照する)
+    user -[#00FF00]-> (購入する)
+  }
+
+  package "管理用" as site {
+    usecase (登録する) as insert
+    usecase (更新する) as update
+    usecase (削除する) as delete
+
+    'admin ---> insert
+    'admin ---> update
+    'admin ---> delete
+    insert <-- admin
+    update <-- admin
+    delete <-- admin
+  }
+
+}
+
+@enduml

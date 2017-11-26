@@ -265,33 +265,39 @@
 </ul>
 <h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
 <p>Windows</p>
-<pre><code>$ cinst nodejs.install
-</code></pre><p>Mac</p>
-<pre><code>$ brew install node
-</code></pre><p>CentOS</p>
-<pre><code>sudo yum install nodejs
-</code></pre><h3 id="&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x78BA;&#x8A8D;">&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x78BA;&#x8A8D;</h3>
-<pre><code>$ node -v
+<pre><code class="lang-sh">$ cinst nodejs.install
+</code></pre>
+<p>Mac</p>
+<pre><code class="lang-sh">$ brew install node
+</code></pre>
+<p>CentOS</p>
+<pre><code class="lang-sh">$ sudo yum install nodejs
+</code></pre>
+<h3 id="&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x78BA;&#x8A8D;">&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x78BA;&#x8A8D;</h3>
+<pre><code class="lang-sh">$ node -v
 v8.1.2
 $ npm -v
 5.0.3
-</code></pre><h2 id="&#x4F7F;&#x3044;&#x65B9;">&#x4F7F;&#x3044;&#x65B9;</h2>
+</code></pre>
+<h2 id="&#x4F7F;&#x3044;&#x65B9;">&#x4F7F;&#x3044;&#x65B9;</h2>
 <p>Express&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;&#x7C21;&#x5358;&#x306A;Hello World&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;</p>
 <p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x7528;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x4F5C;&#x6210;</p>
-<pre><code>$ mkdir project
-$ cd project
-</code></pre><p>&#x521D;&#x671F;&#x5316;</p>
-<pre><code>$ npm init
+<pre><code class="lang-sh">$ mkdir project
+$ <span class="hljs-built_in">cd</span> project
+</code></pre>
+<p>&#x521D;&#x671F;&#x5316;</p>
+<pre><code class="lang-sh">$ npm init
 package name: (project)
 version: (1.0.0)
 description:
 entry point: (index.js)
-test command:
+<span class="hljs-built_in">test</span> <span class="hljs-built_in">command</span>:
 git repository:
 keywords:
 author:
 license: (ISC)
-</code></pre><p>&#x5165;&#x529B;&#x3092;&#x4FC3;&#x3055;&#x308C;&#x308B;&#x304C;&#x5168;&#x3066;Enter&#x3067;OK&#x3002;package.json&#x304C;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x5F8C;&#x3067;&#x5909;&#x66F4;&#x3002;</p>
+</code></pre>
+<p>&#x5165;&#x529B;&#x3092;&#x4FC3;&#x3055;&#x308C;&#x308B;&#x304C;&#x5168;&#x3066;Enter&#x3067;OK&#x3002;package.json&#x304C;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x5F8C;&#x3067;&#x5909;&#x66F4;&#x3002;</p>
 <p>package.json</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;project&quot;</span>,
@@ -483,7 +489,7 @@ Server running at http://localhost:3000/
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Node.js","level":"1.4","depth":1,"next":{"title":"PlantUML","level":"1.5","depth":1,"path":"docs/plantuml.md","ref":"./docs/plantuml.md","articles":[]},"previous":{"title":"samba","level":"1.3.1","depth":2,"path":"docs/samba.md","ref":"./docs/samba.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["plantuml"],"pluginsConfig":{"plantuml":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/nodejs.md","mtime":"2017-06-21T08:33:16.630Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-11-21T08:46:13.568Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Node.js","level":"1.4","depth":1,"next":{"title":"PlantUML","level":"1.5","depth":1,"path":"docs/plantuml.md","ref":"./docs/plantuml.md","articles":[]},"previous":{"title":"samba","level":"1.3.1","depth":2,"path":"docs/samba.md","ref":"./docs/samba.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["plantuml"],"pluginsConfig":{"plantuml":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/nodejs.md","mtime":"2017-06-30T16:15:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-11-26T14:46:45.974Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -101,6 +101,8 @@
 
 #### 直接埋め込む
 
+直接以下のテキストを書くだけ
+
 <iframe src="https://gist.github.com/kgfnk/81666b05957ef16cb6642c2145661ff7.pibb" width="100%" height="200" allowtransparency="true" frameborder="0"></iframe>
 
 #### URLを埋め込む
@@ -124,3 +126,16 @@
 ワークスペース内のダイアグラムをエクスポート
 
 `/out/`ディレクトリに画像を作成してくれる
+
+## 似た仕組み
+
+- [mermaidjs](https://mermaidjs.github.io)
+- [Graphviz](http://graphviz.readthedocs.io/en/stable/index.html)
+- [blockdiag](http://blockdiag.com/ja/index.html)
+
+## 参考サイト
+
+- [Visual Studio Code](https://code.visualstudio.com)
+- [PlantUML](http://plantuml.com)
+- [PlantUML Server](http://www.plantuml.com/plantuml/)
+- [Qiita PlantUMLの環境を設定する（シンタックスハイライト+リアルタイムプレビュー）](https://qiita.com/koara-local/items/e7a7a7d68a4f99a91ab1)

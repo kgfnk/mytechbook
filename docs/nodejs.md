@@ -11,22 +11,22 @@
 ## インストール
 
 Windows
-```
+```sh
 $ cinst nodejs.install
 ```
 
 Mac
-```
+```sh
 $ brew install node
 ```
 
 CentOS
-```
-sudo yum install nodejs
+```sh
+$ sudo yum install nodejs
 ```
 
 ### バージョン確認
-```
+```sh
 $ node -v
 v8.1.2
 $ npm -v
@@ -38,13 +38,13 @@ $ npm -v
 Expressを利用した簡単なHello Worldプログラム
 
 プロジェクト用フォルダ作成
-```
+```sh
 $ mkdir project
 $ cd project
 ```
 
 初期化
-```
+```sh
 $ npm init
 package name: (project)
 version: (1.0.0)

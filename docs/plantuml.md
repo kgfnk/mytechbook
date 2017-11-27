@@ -127,6 +127,15 @@
 
 `/out/`ディレクトリに画像を作成してくれる
 
+```
+out
+　├─1_usecase
+　│　　　ユースケース図.png
+　│
+　└─2_sequence
+　　　　シーケンス図.png
+```
+
 ## 似た仕組み
 
 - [mermaidjs](https://mermaidjs.github.io)

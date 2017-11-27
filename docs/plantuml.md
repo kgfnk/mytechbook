@@ -142,7 +142,7 @@ out
 - [Graphviz](http://graphviz.readthedocs.io/en/stable/index.html)
 - [blockdiag](http://blockdiag.com/ja/index.html)
 
-## 参考サイト
+## 参考サイト
 
 - [Visual Studio Code](https://code.visualstudio.com)
 - [PlantUML](http://plantuml.com)
